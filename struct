@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+struct Perpus {
+	string judul;
+	string pengarang;
+	int tahun;
+};
+
+int main (){
+	int indeks;
+	int jumlah;
+	cout << "Program Input Buku\n\nMasukkan jumlah buku = ";
+	cin >> jumlah;
+	Perpus buku[jumlah];
+	
+	for (int i=0; i<jumlah; i++) {
+	cout << "\nBuku Data ke-" << i+1 << endl;
+	cout << "Masukkan judul buku = ";
+	cin >> buku[i].judul;
+	cout << "Masukkan nama pengarang = ";
+	cin >> buku[i].pengarang;
+	cout << "Masukkan tahun terbit = ";
+	cin >>  buku[i].tahun;
+	}
+	
+	cout << "\nMasukkan nomor data yang ingin dimunculkan = ";
+	cin >> indeks;
+	
+	cout << "Judul\t\t: " << buku[indeks-1].judul << endl;
+	cout << "Pengarang\t\t: " << buku[indeks-1].pengarang << endl;
+	cout << "Tahun\t\t :" << buku[indeks-1].tahun << endl;
+}
